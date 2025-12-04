@@ -23,11 +23,11 @@ export default async function RevenueChart()
   if (!revenue || revenue.length === 0) {
     return <p className="justify-center mt-4 text-gray-400">No data available.</p>;
   }
-
+  const newDate = new Date()
   return (
     <div className="w-full md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        Recent Revenue
+        Recent Revenue As Of {newDate.getMonth()+ '/' + newDate.getDay() + '/' + newDate.getFullYear()}
       </h2>
       {/* NOTE: Uncomment this code in Chapter 7 */}
 
